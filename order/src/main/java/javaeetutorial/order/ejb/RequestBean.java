@@ -126,7 +126,7 @@ public class RequestBean {
     
     public void createOrder(Integer orderId, char status, int discount, String shipmentInfo) {
         try {
-            CustomerOrder order = new CustomerOrder(orderId, status, discount, shipmentInfo, 45);
+            CustomerOrder order = new CustomerOrder(orderId, status, discount, shipmentInfo);
             em.persist(order);
         } catch (Exception e) {
             throw new EJBException(e.getMessage());
