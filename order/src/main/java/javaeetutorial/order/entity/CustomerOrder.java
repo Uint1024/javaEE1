@@ -33,6 +33,7 @@ public class CustomerOrder implements java.io.Serializable {
     private char status;
     private Date lastUpdate;
     private int discount;
+    private int test;
     private String shipmentInfo;
     private Collection<LineItem> lineItems;
     
@@ -42,7 +43,8 @@ public class CustomerOrder implements java.io.Serializable {
     }
     
     public CustomerOrder(Integer orderId, char status, int discount, 
-            String shipmentInfo) {
+            String shipmentInfo, int test) {
+        this.test = test;
         this.orderId = orderId;
         this.status = status;
         this.discount = discount;
@@ -59,6 +61,16 @@ public class CustomerOrder implements java.io.Serializable {
     public void setOrderId(Integer orderId) {
         this.orderId = orderId;
     }
+
+    public int getTest() {
+        return test;
+    }
+
+    public void setTest(int test) {
+        this.test = test;
+    }
+    
+    
     
     public char getStatus() {
         return status;
